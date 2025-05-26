@@ -24,15 +24,19 @@ const imageNames = [
   'runial_gradient.svg',
   'Say2See.png',
   'snapchat.svg',
-  'tjhsst.png'
+  'tjhsst.png',
 ];
 
 // Create the list of images to process
-const imagesToProcess = imageNames.map(name => ({ name, path: '' }));
+const imagesToProcess = imageNames.map((name) => ({ name, path: '' }));
 
 async function processImage(imageConfig) {
-  const sourceDir = imageConfig.path ? path.join(sourceBaseDir, imageConfig.path) : sourceBaseDir;
-  const targetDir = imageConfig.path ? path.join(targetBaseDir, imageConfig.path) : targetBaseDir;
+  const sourceDir = imageConfig.path
+    ? path.join(sourceBaseDir, imageConfig.path)
+    : sourceBaseDir;
+  const targetDir = imageConfig.path
+    ? path.join(targetBaseDir, imageConfig.path)
+    : targetBaseDir;
 
   const sourcePath = path.join(sourceDir, imageConfig.name);
   const baseName = path.parse(imageConfig.name).name;
@@ -77,7 +81,7 @@ async function processImage(imageConfig) {
     // Mobile WebP
     await sharp(sourcePath)
       .resize(mobileResizeOptions) // Optional: Resize for mobile WebP
-      .webp({ quality: 75 })   // Good compression for mobile WebP
+      .webp({ quality: 75 }) // Good compression for mobile WebP
       .toFile(mobileWebpPath);
     console.log(`Generated mobile WebP: ${mobileWebpPath}`);
 
@@ -87,7 +91,7 @@ async function processImage(imageConfig) {
       .png({
         compressionLevel: 9, // Maximize lossless compression (0-9)
         adaptiveFiltering: true, // Can improve compression
-        force: true // Ensures PNG output
+        force: true, // Ensures PNG output
       })
       .toFile(desktopPngPath);
     console.log(`Generated desktop PNG: ${desktopPngPath}`);
@@ -99,13 +103,15 @@ async function processImage(imageConfig) {
         compressionLevel: 9,
         adaptiveFiltering: true,
         // palette: true, // Consider if image has < 256 colors for significant size reduction
-        force: true
+        force: true,
       })
       .toFile(mobilePngPath);
     console.log(`Generated mobile PNG: ${mobilePngPath}`);
-
   } catch (err) {
-    console.error(`Error processing ${imageConfig.name} (${baseName}${extName}):`, err);
+    console.error(
+      `Error processing ${imageConfig.name} (${baseName}${extName}):`,
+      err
+    );
   }
 }
 

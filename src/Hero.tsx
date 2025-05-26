@@ -35,7 +35,9 @@ export const Hero = memo(function Hero() {
           loading="eager" // Hero images are often critical
         />
         {/* Content needs to be above the image */}
-        <span className="text-bg w-full dynamic my-10 relative z-10">{HERO_SECTION}</span>
+        <span className="text-bg w-full dynamic my-10 relative z-10">
+          {HERO_SECTION}
+        </span>
       </div>
       <div className="text-2xl mt-20 flex justify-center">
         <span className=" w-full dynamic">{HERO_SECTION_2}</span>

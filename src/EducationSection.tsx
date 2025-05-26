@@ -60,9 +60,7 @@ function School({
           className={imageClassName} // Pass the original className here
           loading="lazy"
         />
-        {imgCredit && (
-          <p className="text-fg-secondary text-sm">{imgCredit}</p>
-        )}
+        {imgCredit && <p className="text-fg-secondary text-sm">{imgCredit}</p>}
       </div>
     </div>
   );

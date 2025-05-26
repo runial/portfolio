@@ -20,7 +20,12 @@ interface NavButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-const NavButton = memo(function NavButton({ id, text, className, onClick }: NavButtonProps) {
+const NavButton = memo(function NavButton({
+  id,
+  text,
+  className,
+  onClick,
+}: NavButtonProps) {
   return (
     <li className="flex items-center ">
       <ScrollToButton id={id} className={className} onClick={onClick}>
@@ -35,7 +40,7 @@ export const NavBar = memo(function NavBar() {
 
   // Use functional update form for setMobileMenuOpen to avoid stale closure
   const toggleMobileMenu = useCallback(() => {
-    setMobileMenuOpen(prevOpen => !prevOpen);
+    setMobileMenuOpen((prevOpen) => !prevOpen);
   }, []);
 
   const closeMobileMenu = useCallback(() => {
@@ -44,13 +49,13 @@ export const NavBar = memo(function NavBar() {
 
   return (
     <div className="md:mx-5">
-      <nav className={
-        `px-10 py-6 fixed left-1/2 -translate-x-1/2 z-100 bg-bg-secondary items-center justify-center max-w-screen
-         ${mobileMenuOpen ? "w-screen h-screen" : ""} {/* Ensure conditional class is applied correctly */}
+      <nav
+        className={`px-10 py-6 fixed left-1/2 -translate-x-1/2 z-100 bg-bg-secondary items-center justify-center max-w-screen
+         ${mobileMenuOpen ? 'w-screen h-screen' : ''} {/* Ensure conditional class is applied correctly */}
          md:flex md:w-auto md:h-auto
          lg:border-solid lg:border-1 lg:border-bg-tertiary
-         lg:rounded-4xl lg:max-w-[calc(100vw-var(--spacing)*6)] lg:top-1`
-      }>
+         lg:rounded-4xl lg:max-w-[calc(100vw-var(--spacing)*6)] lg:top-1`}
+      >
         <div className="flex max-w-full w-3xl justify-between">
           <img src={runialGradientLogo} alt={ALT_TEXT_RUNIAL_LOGO} />
 
@@ -64,16 +69,41 @@ export const NavBar = memo(function NavBar() {
 
           {/* Mobile menu toggle button */}
           <Button className="block md:hidden" onClick={toggleMobileMenu}>
-            <img src={mobileMenuOpen ? closeMenuIcon : menuIcon} alt="Menu icon" />
+            <img
+              src={mobileMenuOpen ? closeMenuIcon : menuIcon}
+              alt="Menu icon"
+            />
           </Button>
         </div>
 
         {/* Mobile menu list */}
-        <ul className={`mt-12 gap-3 h-full md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} flex flex-col gap-x-1`}>
-          <NavButton className="text-xl" onClick={closeMobileMenu} id={SECTION_IDS.EDUCATION} text={NAVBAR_EDUCATION} />
-          <NavButton className="text-xl" onClick={closeMobileMenu} id={SECTION_IDS.INTERESTS} text={NAVBAR_INTERESTS} />
-          <NavButton className="text-xl" onClick={closeMobileMenu} id={SECTION_IDS.PROJECTS} text={NAVBAR_PROJECTS} />
-          <NavButton className="text-xl" onClick={closeMobileMenu} id={SECTION_IDS.CONTACT} text={NAVBAR_CONTACT} />
+        <ul
+          className={`mt-12 gap-3 h-full md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} flex flex-col gap-x-1`}
+        >
+          <NavButton
+            className="text-xl"
+            onClick={closeMobileMenu}
+            id={SECTION_IDS.EDUCATION}
+            text={NAVBAR_EDUCATION}
+          />
+          <NavButton
+            className="text-xl"
+            onClick={closeMobileMenu}
+            id={SECTION_IDS.INTERESTS}
+            text={NAVBAR_INTERESTS}
+          />
+          <NavButton
+            className="text-xl"
+            onClick={closeMobileMenu}
+            id={SECTION_IDS.PROJECTS}
+            text={NAVBAR_PROJECTS}
+          />
+          <NavButton
+            className="text-xl"
+            onClick={closeMobileMenu}
+            id={SECTION_IDS.CONTACT}
+            text={NAVBAR_CONTACT}
+          />
         </ul>
       </nav>
     </div>

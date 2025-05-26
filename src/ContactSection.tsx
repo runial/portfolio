@@ -47,11 +47,31 @@ export const ContactSection = memo(function ContactSection() {
         <div className="stylized-box flex flex-col gap-3 flex-4">
           <p className="text-fg-secondary text-lg">{CONTACT_EMAIL}</p>
           <ul className="flex gap-5">
-            <SocialMediaLink imgSrc={githubIcon} imgAlt={GITHUB_ICON_ALT} href={GITHUB_LINK} />
-            <SocialMediaLink imgSrc={dribbbleIcon} imgAlt={DRIBBBLE_ICON_ALT} href={DRIBBBLE_LINK} />
-            <SocialMediaLink imgSrc={discordIcon} imgAlt={DISCORD_ICON_ALT} href={DISCORD_LINK} />
-            <SocialMediaLink imgSrc={instagramIcon} imgAlt={INSTAGRAM_ICON_ALT} href={INSTAGRAM_LINK} />
-            <SocialMediaLink imgSrc={snapchatIcon} imgAlt={SNAPCHAT_ICON_ALT} href={SNAPCHAT_LINK} />
+            <SocialMediaLink
+              imgSrc={githubIcon}
+              imgAlt={GITHUB_ICON_ALT}
+              href={GITHUB_LINK}
+            />
+            <SocialMediaLink
+              imgSrc={dribbbleIcon}
+              imgAlt={DRIBBBLE_ICON_ALT}
+              href={DRIBBBLE_LINK}
+            />
+            <SocialMediaLink
+              imgSrc={discordIcon}
+              imgAlt={DISCORD_ICON_ALT}
+              href={DISCORD_LINK}
+            />
+            <SocialMediaLink
+              imgSrc={instagramIcon}
+              imgAlt={INSTAGRAM_ICON_ALT}
+              href={INSTAGRAM_LINK}
+            />
+            <SocialMediaLink
+              imgSrc={snapchatIcon}
+              imgAlt={SNAPCHAT_ICON_ALT}
+              href={SNAPCHAT_LINK}
+            />
           </ul>
         </div>
       </div>

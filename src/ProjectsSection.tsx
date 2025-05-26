@@ -30,7 +30,6 @@ import projectDaisyMobilePng from './assets/img-optimized/project_daisy.mobile.p
 import say2SeeDesktopPng from './assets/img-optimized/Say2See.desktop.png';
 import say2SeeMobilePng from './assets/img-optimized/Say2See.mobile.png';
 
-
 interface ProjectProps {
   name: string;
   description: string;

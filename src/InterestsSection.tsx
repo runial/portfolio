@@ -32,11 +32,23 @@ export const InterestsSection = memo(function InterestsSection() {
   return (
     <Section id={SECTION_IDS.INTERESTS} sectionName={INTERESTS_HEADER}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <InterestCard header={INTERESTS_PIANO_HEADER} description={INTERESTS_PIANO_DESCRIPTION} />
-        <InterestCard header={INTERESTS_PROGRAMMING_HEADER} description={INTERESTS_PROGRAMMING_DESCRIPTION} />
-        <InterestCard header={INTERESTS_PUBLIC_SERVICE_HEADER} description={INTERESTS_PUBLIC_SERVICE_DESCRIPTION} />
-        <InterestCard header={INTERESTS_OTHER_HEADER} description={INTERESTS_OTHER_DESCRIPTION} />
+        <InterestCard
+          header={INTERESTS_PIANO_HEADER}
+          description={INTERESTS_PIANO_DESCRIPTION}
+        />
+        <InterestCard
+          header={INTERESTS_PROGRAMMING_HEADER}
+          description={INTERESTS_PROGRAMMING_DESCRIPTION}
+        />
+        <InterestCard
+          header={INTERESTS_PUBLIC_SERVICE_HEADER}
+          description={INTERESTS_PUBLIC_SERVICE_DESCRIPTION}
+        />
+        <InterestCard
+          header={INTERESTS_OTHER_HEADER}
+          description={INTERESTS_OTHER_DESCRIPTION}
+        />
       </div>
     </Section>
-  )
+  );
 });

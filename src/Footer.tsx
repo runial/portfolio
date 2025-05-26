@@ -7,9 +7,11 @@ import { Button } from './Button.tsx';
 import type { LicensingModalProps } from './LicensingModal.tsx';
 import { memo, useCallback } from 'react';
 
-export const Footer = memo(function Footer({ setLicensingModalOpen }: LicensingModalProps) {
+export const Footer = memo(function Footer({
+  setLicensingModalOpen,
+}: LicensingModalProps) {
   const toggleLicensingModal = useCallback(() => {
-    setLicensingModalOpen(prevOpen => !prevOpen);
+    setLicensingModalOpen((prevOpen) => !prevOpen);
   }, []);
 
   return (

@@ -19,7 +19,6 @@ export function OptimizedPicture({
   className,
   loading,
 }: OptimizedPictureProps) {
-
   return (
     <picture>
       {/* Mobile Sources (Order: WebP first, then PNG) */}

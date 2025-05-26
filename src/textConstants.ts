@@ -65,18 +65,21 @@ export const PROJECTS_HEADER = 'Projects';
 export const PROJECT_DAISY_TITLE = 'Project Daisy, 2025';
 export const PROJECT_DAISY_DESCRIPTION =
   "A mental health app designed to help students navigate today's world.";
-export const PROJECT_DAISY_IMG_ALT = 'An image of a user interface for Project Daisy. There are multiple relaxation exercises on screen, such as Breathe and Music.';
+export const PROJECT_DAISY_IMG_ALT =
+  'An image of a user interface for Project Daisy. There are multiple relaxation exercises on screen, such as Breathe and Music.';
 export const PROJECT_DAISY_LINK = 'https://example.com/?projectDaisy';
 export const PROJECT_SAY2SEE_TITLE = 'Say2See, 2025';
 export const PROJECT_SAY2SEE_DESCRIPTION =
   'A specially-designed 20 Questions app for someone with disabilities.';
-export const PROJECT_SAY2SEE_IMG_ALT = 'An image of a user interface for Say2See. Multiple yes/no questions for the game 20 questions are displayed.';
+export const PROJECT_SAY2SEE_IMG_ALT =
+  'An image of a user interface for Say2See. Multiple yes/no questions for the game 20 questions are displayed.';
 export const PROJECT_SAY2SEE_LINK = 'https://github.com/runial/20-questions';
 
 /* Contact */
 export const CONTACT_HEADER = 'Contact';
 export const CONTACT_SUBHEADER = "Want to talk? Let's get in touch.";
-export const CONTACT_EMAIL = 'cool\u200B.\u200Bemail123\u200B@\u200Bexample\u200B.\u200Bcom';
+export const CONTACT_EMAIL =
+  'cool\u200B.\u200Bemail123\u200B@\u200Bexample\u200B.\u200Bcom';
 export const GITHUB_ICON_ALT = 'GitHub logo';
 export const DRIBBBLE_ICON_ALT = 'Dribbble logo';
 export const DISCORD_ICON_ALT = 'Discord logo';

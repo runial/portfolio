@@ -19,8 +19,14 @@ function App() {
       <InterestsSection />
       <ProjectsSection />
       <ContactSection />
-      <Footer licensingModalOpen={licensingModalOpen} setLicensingModalOpen={setLicensingModalOpen} />
-      <LicensingModal licensingModalOpen={licensingModalOpen} setLicensingModalOpen={setLicensingModalOpen} />
+      <Footer
+        licensingModalOpen={licensingModalOpen}
+        setLicensingModalOpen={setLicensingModalOpen}
+      />
+      <LicensingModal
+        licensingModalOpen={licensingModalOpen}
+        setLicensingModalOpen={setLicensingModalOpen}
+      />
     </main>
   );
 }
