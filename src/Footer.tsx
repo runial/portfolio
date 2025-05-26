@@ -1,3 +1,4 @@
+import { memo, useCallback } from 'react';
 import {
   FOOTER_TEXT,
   FOOTER_SEPARATOR,
@@ -5,7 +6,6 @@ import {
 } from './textConstants.ts';
 import { Button } from './Button.tsx';
 import type { LicensingModalProps } from './LicensingModal.tsx';
-import { memo, useCallback } from 'react';
 
 export const Footer = memo(function Footer({
   setLicensingModalOpen,

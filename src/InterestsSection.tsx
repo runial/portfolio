@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import {
   SECTION_IDS,
   INTERESTS_HEADER,
@@ -12,7 +13,6 @@ import {
 } from './textConstants.ts';
 import { Section } from './Section.tsx';
 import { BulletList } from './BulletList.tsx';
-import { memo } from 'react';
 
 interface InterestCardProps {
   header: string;

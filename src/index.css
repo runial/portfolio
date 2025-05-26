@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-display: 'Figtree', -apple-system, -system-ui, Avenir, sans-serif;
+  --font-display: 'Figtree', -apple-system, var(--font-sans), sans-serif;
 
   /* Font sizes */
   --text-sm: 16px;
@@ -57,11 +57,6 @@
   box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  text-decoration: inherit;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -88,7 +83,7 @@ button {
 }
 
 .img-large {
-  @apply rounded-4xl object-cover min-h-[70vh];
+  @apply rounded-4xl object-cover;
 }
 
 ::selection {

@@ -6,31 +6,35 @@ A responsive and accessible portfolio website for myself (Richard Tang).
 
 ## Technologies Used
 
-*   TypeScript
-*   React
-*   Vite
-*   Tailwind CSS
+- TypeScript
+- React
+- Vite
+- Tailwind CSS
 
 ## Prerequisites
 
-*   **Node.js**
-*   **npm**
+- **Node.js**
+- **npm**
 
 ## Getting Started
 
 1.  **Clone the repository:**
     Clone this repository to your local machine.
+
     ```bash
     git clone https://github.com/runial/portfolio
     ```
 
 2.  **Navigate to the project directory:**
+
     ```bash
     cd path/to/your-project-directory
     ```
+
     Make sure to replace the placeholder with the desired project directory.
 
 3.  **Install dependencies:**
+
     ```bash
     npm install
     ```

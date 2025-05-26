@@ -17,6 +17,7 @@ export const NAVBAR_CONTACT = 'Contact';
 export const HERO_SECTION = "Hello, I'm Richard.";
 export const HERO_SECTION_2 =
   "I'm a programmer, pianist, and engineer that's always willing to try new things.";
+export const HERO_IMG_ALT = 'Blue gradient background';
 
 /* Education */
 export const EDUCATION_HEADER = 'Education';

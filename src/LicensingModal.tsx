@@ -1,7 +1,7 @@
-import licenseText from './assets/softwareLicenses.txt?raw';
 import * as React from 'react';
-import { Button } from './Button.tsx';
 import { memo, useCallback } from 'react';
+import licenseText from './assets/softwareLicenses.txt?raw';
+import { Button } from './Button.tsx';
 
 export interface LicensingModalProps {
   licensingModalOpen: boolean;

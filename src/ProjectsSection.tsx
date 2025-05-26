@@ -1,6 +1,4 @@
-// Removed direct image imports as OptimizedPicture will handle sources
-// import projectDaisyImg from './assets/img-og/project_daisy.png';
-// import Say2SeeImg from './assets/img-og/Say2See.png';
+import { memo } from 'react';
 import {
   SECTION_IDS,
   PROJECTS_HEADER,
@@ -15,8 +13,7 @@ import {
 } from './textConstants.ts';
 import { Section } from './Section.tsx';
 import { Link } from './Link.tsx';
-import { memo } from 'react';
-import { OptimizedPicture } from './OptimizedPicture.tsx'; // Import OptimizedPicture
+import { OptimizedPicture } from './OptimizedPicture.tsx';
 
 // Import Optimized WebP images
 import projectDaisyDesktopWebp from './assets/img-optimized/project_daisy.desktop.webp';

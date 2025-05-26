@@ -1,3 +1,4 @@
+import { type MouseEventHandler, useState, memo, useCallback } from 'react';
 import { Button, ScrollToButton } from './Button.tsx';
 import runialGradientLogo from './assets/img-og/runial_gradient.svg';
 import menuIcon from './assets/img-og/menu.svg';
@@ -10,8 +11,6 @@ import {
   NAVBAR_CONTACT,
   ALT_TEXT_RUNIAL_LOGO,
 } from './textConstants.ts';
-// @ts-ignore
-import { type MouseEventHandler, useState, memo, useCallback } from 'react';
 
 interface NavButtonProps {
   id: string;

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Section } from './Section.tsx';
 import { Link } from './Link.tsx';
 import {
@@ -21,7 +22,6 @@ import dribbbleIcon from './assets/img-og/dribbble.svg';
 import discordIcon from './assets/img-og/discord.svg';
 import instagramIcon from './assets/img-og/instagram.svg';
 import snapchatIcon from './assets/img-og/snapchat.svg';
-import { memo } from 'react';
 
 interface SocialMediaLinkProps {
   imgSrc: string;
