@@ -1,0 +1,63 @@
+# .github/workflows/deploy.yml
+name: Deploy to GitHub Pages
+
+on:
+  # Runs on pushes targeting the main branch
+  push:
+    branches:
+      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Or your preferred Node.js LTS version
+          cache: 'npm' # Use 'yarn' if you use Yarn
+
+      - name: Install dependencies
+        run: npm ci # 'npm ci' is recommended for CI for faster, reliable builds. Or 'yarn install --frozen-lockfile'
+
+      - name: Build project
+        # This command should use your pre-optimized images from src/assets/img-optimized/
+        # Ensure you've run your image optimization script locally and committed the results.
+        run: npm run build # This executes the 'build' script from your package.json
+        env:
+          # If your build process needs environment variables, define them here
+          # Example: VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
+          CI: true
+
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Path to the directory containing your built static files
+          path: ./dist # Default for Vite. Adjust if your build output is elsewhere.
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build # This job runs only after the 'build' job succeeds
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # Sets the deployment URL in the GitHub environment
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        # This action takes the artifact uploaded in the 'build' job
+        # and deploys it to GitHub Pages.

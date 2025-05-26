@@ -8,4 +8,5 @@ export default defineConfig({
     build: {
         target: 'es2015'
     },
+    base: '/portfolio/'
 })
