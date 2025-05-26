@@ -83,7 +83,7 @@ button {
 }
 
 .img-large {
-  @apply rounded-4xl object-cover;
+  @apply rounded-4xl object-cover min-h-[45vh] lg:min-h-0;
 }
 
 ::selection {
