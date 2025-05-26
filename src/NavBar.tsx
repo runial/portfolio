@@ -13,21 +13,21 @@ import {
 } from './textConstants.ts';
 
 interface NavButtonProps {
-  id: string;
+  targetId: string;
   text: string;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const NavButton = memo(function NavButton({
-  id,
+  targetId,
   text,
   className,
   onClick,
 }: NavButtonProps) {
   return (
-    <li className="flex items-center ">
-      <ScrollToButton id={id} className={className} onClick={onClick}>
+    <li className="flex items-center transition-transform hover:duration-300 hover:scale-108">
+      <ScrollToButton id={targetId} className={className} onClick={onClick}>
         {text}
       </ScrollToButton>
     </li>
@@ -60,10 +60,10 @@ export const NavBar = memo(function NavBar() {
 
           {/* Non-mobile menu */}
           <ul className="md:flex hidden gap-6">
-            <NavButton id={SECTION_IDS.EDUCATION} text={NAVBAR_EDUCATION} />
-            <NavButton id={SECTION_IDS.INTERESTS} text={NAVBAR_INTERESTS} />
-            <NavButton id={SECTION_IDS.PROJECTS} text={NAVBAR_PROJECTS} />
-            <NavButton id={SECTION_IDS.CONTACT} text={NAVBAR_CONTACT} />
+            <NavButton targetId={SECTION_IDS.EDUCATION} text={NAVBAR_EDUCATION} />
+            <NavButton targetId={SECTION_IDS.INTERESTS} text={NAVBAR_INTERESTS} />
+            <NavButton targetId={SECTION_IDS.PROJECTS} text={NAVBAR_PROJECTS} />
+            <NavButton targetId={SECTION_IDS.CONTACT} text={NAVBAR_CONTACT} />
           </ul>
 
           {/* Mobile menu toggle button */}
@@ -82,25 +82,25 @@ export const NavBar = memo(function NavBar() {
           <NavButton
             className="text-xl"
             onClick={closeMobileMenu}
-            id={SECTION_IDS.EDUCATION}
+            targetId={SECTION_IDS.EDUCATION}
             text={NAVBAR_EDUCATION}
           />
           <NavButton
             className="text-xl"
             onClick={closeMobileMenu}
-            id={SECTION_IDS.INTERESTS}
+            targetId={SECTION_IDS.INTERESTS}
             text={NAVBAR_INTERESTS}
           />
           <NavButton
             className="text-xl"
             onClick={closeMobileMenu}
-            id={SECTION_IDS.PROJECTS}
+            targetId={SECTION_IDS.PROJECTS}
             text={NAVBAR_PROJECTS}
           />
           <NavButton
             className="text-xl"
             onClick={closeMobileMenu}
-            id={SECTION_IDS.CONTACT}
+            targetId={SECTION_IDS.CONTACT}
             text={NAVBAR_CONTACT}
           />
         </ul>

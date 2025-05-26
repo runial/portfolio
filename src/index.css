@@ -51,6 +51,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
 }
 
 * {
@@ -83,7 +85,7 @@ button {
 }
 
 .img-large {
-  @apply rounded-4xl object-cover min-h-[45vh] lg:min-h-0;
+  @apply rounded-4xl object-cover h-full w-full min-h-[45vh] lg:min-h-0;
 }
 
 ::selection {

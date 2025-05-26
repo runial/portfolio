@@ -33,7 +33,7 @@ function SocialMediaLink({ imgSrc, imgAlt, href }: SocialMediaLinkProps) {
   return (
     <li>
       <Link href={href}>
-        <img src={imgSrc} alt={imgAlt} />
+        <img src={imgSrc} alt={imgAlt} loading="lazy" />
       </Link>
     </li>
   );
