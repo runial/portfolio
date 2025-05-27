@@ -16,7 +16,7 @@ export const NAVBAR_CONTACT = 'Contact';
 /* Hero section */
 export const HERO_SECTION = "Hello, I'm Richard.";
 export const HERO_SECTION_2 =
-  "I'm a programmer, pianist, and engineer that's always willing to try new things.";
+  "I'm a pianist, programmer, and engineer that's always willing to try new things.";
 export const HERO_IMG_ALT = 'Blue gradient background';
 
 /* Education */
@@ -79,8 +79,8 @@ export const PROJECT_SAY2SEE_LINK = 'https://github.com/runial/20-questions';
 /* Contact */
 export const CONTACT_HEADER = 'Contact';
 export const CONTACT_SUBHEADER = "Want to talk? Let's get in touch.";
-export const CONTACT_EMAIL =
-  'cool\u200B.\u200Bemail123\u200B@\u200Bexample\u200B.\u200Bcom';
+export const CONTACT_LINK =
+  'https://bit.ly/rtangcontact';
 export const GITHUB_ICON_ALT = 'GitHub logo';
 export const DRIBBBLE_ICON_ALT = 'Dribbble logo';
 export const DISCORD_ICON_ALT = 'Discord logo';

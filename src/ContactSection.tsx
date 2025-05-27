@@ -5,7 +5,7 @@ import {
   SECTION_IDS,
   CONTACT_HEADER,
   CONTACT_SUBHEADER,
-  CONTACT_EMAIL,
+  CONTACT_LINK,
   GITHUB_ICON_ALT,
   DRIBBBLE_ICON_ALT,
   DISCORD_ICON_ALT,
@@ -45,7 +45,9 @@ export const ContactSection = memo(function ContactSection() {
       <div className="flex flex-col lg:flex-row gap-4">
         <p className="text-xl flex-3">{CONTACT_SUBHEADER}</p>
         <div className="stylized-box flex flex-col gap-3 flex-4">
-          <p className="text-fg-secondary text-lg">{CONTACT_EMAIL}</p>
+          <Link href={CONTACT_LINK}>
+            <p className="text-fg-secondary text-lg">{CONTACT_LINK}</p>
+          </Link>
           <ul className="flex gap-5">
             <SocialMediaLink
               imgSrc={githubIcon}
