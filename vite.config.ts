@@ -8,5 +8,5 @@ export default defineConfig({
   build: {
     target: 'es2015',
   },
-  base: '/portfolio/',
+  base: process.env.VITE_BASE_PATH || '/portfolio/',
 });
